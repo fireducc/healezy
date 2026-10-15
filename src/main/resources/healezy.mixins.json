@@ -3,7 +3,8 @@
 	"package": "net.fire_ducc.healezy.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"HealthMixin"
+		"HealthMixin",
+		"WakeUpMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
