@@ -11,17 +11,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Player.class)
 public abstract class WakeUpMixin {
 
-    @Inject(method = "stopSleeping", at = @At("TAIL"))
+    @Inject(method = "stopSleepInBed", at = @At("TAIL"))
     private void onWakeUp(CallbackInfo ci) {
         Player player = (Player) (Object) this;
 
         // Only apply the effect on the server side
         if (!player.level().isClientSide()) {
-            player.addEffect(new MobEffectInstance(
-                    MobEffects.INSTANT_HEALTH,
-                    1,
-                    0
-            ));
+            player.addEffect(new MobEffectInstance(MobEffects.INSTANT_HEALTH, 1, 0));
+
         }
     }
 }
