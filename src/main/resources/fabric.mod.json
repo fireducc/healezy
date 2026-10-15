@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "healezy",
+	"version": "${1.0-26.3}",
+	"name": "Healezy",
+	"description": "",
+	"authors": [
+		"fire_ducc!"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "MIT",
+	"icon": "assets/healezy/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.fire_ducc.healezy.Healezy"
+		],
+		"fabric-datagen": [
+			"net.fire_ducc.healezy.HealezyDataGenerator"
+		]
+	},
+	"mixins": [
+		"healezy.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
